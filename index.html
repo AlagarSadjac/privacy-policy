@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - English பேசலாம்</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             overflow-wrap: break-word;
@@ -12,11 +15,10 @@
             word-break: break-word;
             padding: 16px;
             margin: 0;
-            box-sizing: border-box;
             background-color: #f8fafc;
             color: #334155;
             line-height: 1.6;
-        } 
+        }
         .container {
             max-width: 800px;
             margin: auto;
@@ -35,14 +37,14 @@
             background-color: #f1f5f9;
             color: #0f172a;
             border: 1px solid #cbd5e1;
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 8px;
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
         }
-        .lang-btn:hover, .lang-btn.active {
+        .lang-btn.active {
             background-color: #1b6a36;
             color: #ffffff;
             border-color: #1b6a36;
@@ -71,9 +73,18 @@
         li {
             margin-bottom: 6px;
         }
-        .divider {
-            border-top: 2px dashed #cbd5e1;
-            margin: 40px 0;
+        .highlight-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #1b6a36;
+            padding: 14px 18px;
+            border-radius: 4px 8px 8px 4px;
+            margin: 16px 0;
+        }
+        .contact-box {
+            background-color: #f1f5f9;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-top: 10px;
         }
         .footer {
             margin-top: 32px;
@@ -83,114 +94,118 @@
             padding-top: 16px;
             text-align: center;
         }
-        .contact-box {
-            background-color: #f1f5f9;
-            padding: 14px 18px;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
 
 <div class="container">
 
-    <!-- மொழி தேர்வு பொத்தான்கள் (Language Selector Buttons) -->
+    <!-- மொழி தேர்வு பொத்தான்கள் -->
     <div class="lang-switch">
-        <button class="lang-btn" onclick="scrollToSection('tamil-section')">தமிழ்</button>
-        <button class="lang-btn active" onclick="scrollToSection('english-section')">English</button>
+        <button id="btn-en" class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button id="btn-ta" class="lang-btn" onclick="switchLanguage('ta')">தமிழ்</button>
     </div>
 
     <!-- ========================================== -->
-    <!-- 1. ENGLISH VERSION (For Google Review Team) -->
+    <!-- 1. ENGLISH VERSION (Primary for Review)    -->
     <!-- ========================================== -->
     <div id="english-section">
         <h1>Privacy Policy</h1>
         <p><strong>Last updated:</strong> October 2026</p>
 
-        <p>Welcome to <strong>English பேசலாம்</strong> ("we," "our," or "us"), developed by <strong>Alaga Software Tech</strong>. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, and what rights you have in relation to it when using our mobile application.</p>
+        <p>Welcome to <strong>English பேசலாம்</strong> ("we," "our," or "us"), developed by <strong>Alaga Software Tech</strong>. We are committed to protecting your personal information and your privacy rights. This Privacy Policy details what information we collect, how it is processed, how it is protected, and your choices regarding data retention and account deletion.</p>
 
         <h2>1. Information We Collect</h2>
-        <p>We only collect information necessary to provide, personalize, and improve your English learning experience:</p>
+        <p>We only collect data strictly necessary to facilitate your language learning journey and ensure account synchronization:</p>
         <ul>
-            <li><strong>Personal Account Information:</strong> When you sign in via Google Sign-In or Mobile Phone Authentication (OTP), we collect your name, email address, profile picture (if Google Sign-In is used), and/or phone number.</li>
-            <li><strong>Learning Progress & Activity:</strong> Information regarding completed lessons, XP points, streaks, test scores, and saved vocabulary words/bookmarks to preserve your progress across devices.</li>
-            <li><strong>Device & Log Data:</strong> Basic technical identifiers such as operating system version, device model, and crash logs collected automatically via Firebase to fix technical errors.</li>
+            <li><strong>Authentication Information:</strong> When you register or sign in via Google Sign-In or Mobile Phone Authentication (SMS OTP), we receive standard identity data including your name, email address, profile picture (if provided via Google), or mobile phone number.</li>
+            <li><strong>Learning Progress & Activity Data:</strong> Metrics such as completed lessons, daily learning streak counters, XP points, and bookmarked/saved vocabulary items. This information is saved to maintain consistency across app sessions and devices.</li>
+            <li><strong>Technical Diagnostics:</strong> Diagnostic logs and standard crash information provided via Firebase services solely for error troubleshooting and stability enhancements.</li>
         </ul>
 
-        <h2>2. How We Use Your Information</h2>
+        <h2>2. How We Use and Share Your Information</h2>
         <ul>
-            <li>To manage your account, authenticate identity, and sync your learning progress using secure Google Firebase cloud services.</li>
-            <li>To operate, maintain, debug, and improve the app's functionality and user interface.</li>
-            <li>We <strong>do not</strong> sell, rent, or trade your personal data to third parties, data brokers, or advertisers.</li>
+            <li>To verify identity, establish your learner profile, and synchronize educational progress via secure cloud databases.</li>
+            <li>To diagnose application bugs, maintain infrastructure uptime, and deliver system improvements.</li>
+            <li><strong>No Data Brokering:</strong> We do not sell, rent, lease, or monetize your personal information to third parties, advertising brokers, or marketing networks. Data is only shared with backend infrastructure partners (Google Firebase) required to operate the application.</li>
         </ul>
 
-        <h2>3. Third-Party Service Providers</h2>
-        <p>The app utilizes third-party libraries and cloud backend services provided by Google LLC:</p>
+        <h2>3. Third-Party Infrastructure Services</h2>
+        <p>Our application interfaces with trusted Google Cloud developer platforms:</p>
         <ul>
-            <li><strong>Google Play Services:</strong> Core platform support and updates.</li>
-            <li><strong>Firebase Authentication:</strong> Secure user login via Google and Phone OTP.</li>
-            <li><strong>Cloud Firestore:</strong> Secure cloud database to store user XP, completed days, and saved words.</li>
+            <li><strong>Firebase Authentication:</strong> Manages secure credential verification via Google Accounts and Phone SMS OTP.</li>
+            <li><strong>Cloud Firestore:</strong> Provides secure cloud database storage for learning metrics and user records.</li>
+            <li><strong>Google Play Services:</strong> Supports core operating system features, updates, and platform dependencies.</li>
         </ul>
 
         <h2>4. Data Security</h2>
-        <p>We implement appropriate technical and organizational security measures, including HTTPS encryption in transit and Google Cloud standard security rules, to protect your personal information from unauthorized access, loss, or misuse.</p>
+        <p>We enforce industry-standard security safeguards. All communications between the mobile application and cloud backend databases are encrypted in transit using Transport Layer Security (HTTPS/TLS). Access to database records is restricted through defined Firebase security rules ensuring users can only read and write their own profile records.</p>
 
         <h2>5. Children's Privacy</h2>
-        <p>Our app does not intentionally collect personally identifiable information from children under the age of 13. If you believe that your child has provided us with personal information without parental consent, please contact us so we can immediately delete it.</p>
+        <p>Our app does not knowingly solicit or collect personally identifiable information from children under the age of 13. If you discover that a child under 13 has submitted personal information without verified guardian consent, contact us immediately to facilitate prompt deletion of those records.</p>
 
-        <h2>6. Account and Data Deletion</h2>
-        <p>You have full ownership of your data. You may delete your account and all associated learning records at any time directly within the app by navigating to <em>Profile (சுயவிவரம்) &gt; Delete Account (கணக்கை நீக்குக)</em>. Alternatively, you can email us to request full data deletion.</p>
+        <h2>6. Account and Data Deletion (Google Play Compliance)</h2>
+        <p>Users have full control over their account data and may request permanent deletion at any time via two pathways:</p>
+        <div class="highlight-box">
+            <p><strong>In-App Deletion:</strong> Open the app &gt; Navigate to <em>Profile (சுயவிவரம்)</em> &gt; Tap <em>Delete Account (கணக்கை நீக்குக)</em>. Your authentication record, learning milestones, and saved vocabulary will be immediately purged.</p>
+            <p><strong>Web / Email Deletion Request:</strong> If you have uninstalled the app or cannot log in, send an email to <a href="mailto:alagarmca006@gmail.com">alagarmca006@gmail.com</a> with the subject <code>"Account Deletion Request - English Pesalam"</code> from your registered email or providing your registered phone number. All associated personal records will be verified and permanently deleted within 7 business days.</p>
+        </div>
 
         <h2>7. Contact Us</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+        <p>For questions, privacy inquiries, or data management requests, please reach out to our team:</p>
         <div class="contact-box">
             <strong>Developer:</strong> Alaga Software Tech<br>
-            <strong>Email:</strong> <a href="mailto:alagarmca006@gmail.com">alagarmca006@gmail.com</a>
+            <strong>Support Email:</strong> <a href="mailto:alagarmca006@gmail.com">alagarmca006@gmail.com</a>
         </div>
     </div>
 
-    <!-- பிரிக்கும் கோடு -->
-    <div class="divider"></div>
-
     <!-- ========================================== -->
-    <!-- 2. TAMIL VERSION (தமிழ்ப் பயனர்களுக்காக) -->
+    <!-- 2. TAMIL VERSION                           -->
     <!-- ========================================== -->
-    <div id="tamil-section">
+    <div id="tamil-section" style="display: none;">
         <h1>தனியுரிமைக் கொள்கை (Privacy Policy)</h1>
         <p><strong>கடைசியாகப் புதுப்பிக்கப்பட்டது:</strong> அக்டோபர் 2026</p>
 
-        <p><strong>English பேசலாம்</strong> செயலிக்கு உங்களை வரவேற்கிறோம். எங்களின் பயனர்களின் தனியுரிமையைப் பாதுகாப்பதில் நாங்கள் மிகுந்த அக்கறை கொண்டுள்ளோம். இந்த ஆவணத்தில் எந்தெந்தத் தகவல்கள் சேகரிக்கப்படுகின்றன மற்றும் அவை எவ்வாறு பாதுகாக்கப்படுகின்றன என்பது விளக்கப்பட்டுள்ளது.</p>
+        <p><strong>English பேசலாம்</strong> செயலிக்கு உங்களை வரவேற்கிறோம். இச்செயலி <strong>Alaga Software Tech</strong> நிறுவனத்தால் உருவாக்கப்பட்டது. எங்கள் பயனர்களின் தனிப்பட்ட தகவல்களின் பாதுகாப்பிற்கு நாங்கள் முழு முன்னுரிமை அளிக்கிறோம். இக்கொள்கை ஆவணத்தில் எந்தெந்தத் தகவல்கள் சேகரிக்கப்படுகின்றன, எவ்வாறு கையாளப்படுகின்றன, மற்றும் கணக்கு நீக்க உரிமைகள் குறித்த விவரங்கள் தெளிவாக விளக்கப்பட்டுள்ளன.</p>
 
         <h2>1. நாங்கள் சேகரிக்கும் தகவல்கள்</h2>
-        <p>பயனர் அனுபவத்தை மேம்படுத்துவதற்காகவும் கற்றல் முன்னேற்றத்தைச் சேமிப்பதற்காகவும் மட்டுமே தகவல்கள் பெறப்படுகின்றன:</p>
+        <p>பயனரின் ஆங்கிலக் கற்றல் அனுபவத்தை வழங்குவதற்கும் முன்னேற்றத்தைச் சேமிப்பதற்கும் அவசியமான தகவல்கள் மட்டுமே பெறப்படுகின்றன:</p>
         <ul>
-            <li><strong>கணக்குத் தகவல்கள்:</strong> கூகுள் கணக்கு (Google Sign-In) அல்லது மொபைல் எண் (OTP) வழியாக உள்நுழையும் போது உங்கள் பெயர், மின்னஞ்சல் முகவரி அல்லது தொலைபேசி எண் பெறப்படுகிறது.</li>
+            <li><strong>கணக்குத் தகவல்கள்:</strong> கூகுள் கணக்கு (Google Sign-In) அல்லது மொபைல் எண் (SMS OTP) வழியாக உள்நுழையும் போது உங்கள் பெயர், மின்னஞ்சல் முகவரி, சுயவிவரப் படம் (கூகுள் மூலம் பெறப்பட்டால்), அல்லது மொபைல் எண் பெறப்படுகிறது.</li>
             <li><strong>கற்றல் சாதனைகள்:</strong> நீங்கள் முடித்த பாடங்கள் (Completed Lessons), தொடர் பயிற்சி நாள்கள் (Streak), அனுபவப் புள்ளிகள் (XP Points) மற்றும் சேமித்த சொற்கள் (Saved Words).</li>
-            <li><strong>சாதனத் தகவல்கள்:</strong> ஆப்பில் ஏற்படும் பிழைகளைச் சரிசெய்வதற்காக கூகுள் ஃபயர்பேஸ் (Google Firebase) வாயிலாக அடிப்படை சாதனப் பதிவுகள் பெறப்படலாம்.</li>
+            <li><strong>தொழில்நுட்பப் பதிவுகள்:</strong> செயலியில் ஏற்படும் கோளாறுகளைச் சரிசெய்யவும் செயல்திறனை மேம்படுத்தவும் Google Firebase மூலம் பெறப்படும் அடிப்படை சாதனத் தகவல் மற்றும் பிழைப் பதிவுகள்.</li>
         </ul>
 
-        <h2>2. தகவல்கள் எவ்வாறு பயன்படுத்தப்படுகின்றன?</h2>
+        <h2>2. தகவல்கள் எவ்வாறு பயன்படுத்தப்படுகின்றன மற்றும் பகிரப்படுகின்றன?</h2>
         <ul>
-            <li>பயனரின் கற்றல் முன்னேற்றத்தை Firebase Cloud-ல் பாதுகாப்பாகச் சேமித்து, வேறு சாதனங்களில் உள்நுழையும் போது மீண்டும் மீட்டெடுக்க.</li>
-            <li>செயலியின் செயல்பாட்டைப் பராமரிக்கவும் பிழைகளைச் சரிசெய்யவும்.</li>
-            <li>பயனரின் அனுமதியின்றி எந்தவொரு தனிப்பட்ட தகவலும் மூன்றாம் நபர்களுக்கோ அல்லது விளம்பர நிறுவனங்களுக்கோ விற்கப்படவோ பகிரப்படவோ மாட்டாது.</li>
+            <li>பயனரின் கற்றல் முன்னேற்றத்தை மேகக்கணித் தளத்தில் (Firebase Cloud) பாதுகாப்பாகச் சேமித்து, நீங்கள் வேறு சாதனங்களில் உள்நுழையும் போது மீண்டும் மீட்டெடுக்கப் பயன்படுகிறது.</li>
+            <li>செயலியின் செயல்திறனைப் பராமரிக்கவும் தொழில்நுட்பப் பிழைகளைச் சரிசெய்யவும் பயன்படுகிறது.</li>
+            <li><strong>தகவல் விற்பனை செய்யப்பட மாட்டாது:</strong> உங்கள் தனிப்பட்ட தரவுகள் எந்தவொரு மூன்றாம் நபர்களுக்கோ, விளம்பர நிறுவனங்களுக்கோ அல்லது முகவர்களுக்கோ விற்கப்படவோ அல்லது வணிக ரீதியாகப் பகிரப்படவோ மாட்டாது. ஆப்பை இயக்குவதற்கு அவசியமான கூகுள் ஃபயர்பேஸ் (Google Firebase) உட்கட்டமைப்புடன் மட்டுமே முறைப்படி இணைக்கப்பட்டுள்ளது.</li>
         </ul>
 
         <h2>3. மூன்றாம் தரப்பு சேவைகள் (Third-Party Services)</h2>
-        <p>செயலியின் பாதுகாப்பு மற்றும் உள்நுழைவு வசதிக்காக Google Play Services, Firebase Authentication மற்றும் Cloud Firestore போன்ற கூகுளின் நம்பகமான சேவைகள் பயன்படுத்தப்படுகின்றன.</p>
+        <p>இச்செயலி Google LLC வழங்கும் நம்பகமான சேவைகளைப் பயன்படுத்துகிறது:</p>
+        <ul>
+            <li><strong>Firebase Authentication:</strong> கூகுள் மற்றும் தொலைபேசி OTP உள்நுழைவுப் பாதுகாப்பிற்குப் பயன்படுகிறது.</li>
+            <li><strong>Cloud Firestore:</strong> கற்றல் மதிப்பெண்கள் மற்றும் சேமித்த சொற்களைப் பாதுகாப்பாக மேகக்கணியில் சேமிக்கப் பயன்படுகிறது.</li>
+            <li><strong>Google Play Services:</strong> செயலியின் சீரான இயக்கம் மற்றும் புதுப்பிப்புகளுக்குப் பயன்படுகிறது.</li>
+        </ul>
 
         <h2>4. தரவுப் பாதுகாப்பு (Data Security)</h2>
-        <p>உங்கள் அனைத்துத் தரவுகளும் Google Firebase-ன் பாதுகாப்பு விதிகளின்படி என்க்ரிப்ட் செய்யப்பட்டு உயர் தரத்துடன் பாதுகாக்கப்படுகின்றன.</p>
+        <p>பயன்பாட்டின் அனைத்துத் தரவுப் பரிமாற்றங்களும் என்க்ரிப்ட் செய்யப்பட்ட பாதுகாப்பான வழிகளில் (HTTPS/TLS) நடைபெறுகின்றன. மேலும் Firebase Security Rules வாயிலாக ஒவ்வொரு பயனரின் தரவும் உரிய உள்நுழைவு அங்கீகாரம் இல்லாமல் மற்றவர்களால் அணுக முடியாதவாறு பாதுகாக்கப்படுகிறது.</p>
 
         <h2>5. குழந்தைகள் தனியுரிமை (Children's Privacy)</h2>
-        <p>இச்செயலி 13 வயதுக்குட்பட்ட குழந்தைகளிடமிருந்து வேண்டுமென்றே எந்தவொரு தனிநபர் தகவல்களையும் சேகரிப்பதில்லை.</p>
+        <p>இச்செயலி 13 வயதுக்குட்பட்ட குழந்தைகளிடமிருந்து திட்டமிட்டு எந்தவொரு தனிப்பட்ட விவரங்களையும் கோருவதில்லை. பெற்றோர் அனுமதியின்றி அத்தகைய தகவல்கள் பதிவாகியிருப்பது தெரியவந்தால் எங்களைத் தொடர்புகொண்டு அவற்றை உடனடியாக நீக்கக் கோரலாம்.</p>
 
         <h2>6. கணக்கு மற்றும் தரவு நீக்கம் (Account Deletion)</h2>
-        <p>பயனர்கள் எப்போது வேண்டுமானாலும் செயலியின் <em>சுயவிவரம் (Profile) &gt; கணக்கை நீக்குக (Delete Account)</em> ஆப்ஷன் மூலம் தங்களின் கணக்கு மற்றும் சாதனைகள் அனைத்தையும் நிரந்தரமாக நீக்கிக்கொள்ள முழு உரிமை உண்டு.</p>
+        <p>பயனர்கள் தங்களின் தரவை எப்போது வேண்டுமானாலும் முழுமையாக நீக்கிக்கொள்ள கூகுள் பிளே விதிகளின்படி இரு வழிகள் வழங்கப்பட்டுள்ளன:</p>
+        <div class="highlight-box">
+            <p><strong>ஆப்பிற்குள் நீக்க:</strong> செயலியின் <em>சுயவிவரம் (Profile) &gt; கணக்கை நீக்குக (Delete Account)</em> பகுதியைத் தேர்வு செய்து உடனடியாக உங்கள் கணக்கு மற்றும் சாதனைகளை நிரந்தரமாக நீக்கலாம்.</p>
+            <p><strong>இணையதளம் / மின்னஞ்சல் வாயிலாக நீக்க:</strong> நீங்கள் செயலியை நீக்கியிருந்தாலோ அல்லது உள்நுழைய முடியாவிட்டாலோ, உங்கள் பதிவுசெய்த மின்னஞ்சல் அல்லது மொபைல் எண்ணைக் குறிப்பிட்டு <a href="mailto:alagarmca006@gmail.com">alagarmca006@gmail.com</a> என்ற முகவரிக்கு <code>"Account Deletion Request - English Pesalam"</code> என மின்னஞ்சல் அனுப்பலாம். சரிபார்ப்பிற்குப் பின் 7 வேலை நாட்களுக்குள் அனைத்துத் தரவுகளும் நிரந்தரமாக நீக்கப்படும்.</p>
+        </div>
 
         <h2>7. தொடர்புக்கு</h2>
-        <p>இந்தக் கொள்கை குறித்து ஏதேனும் கேள்விகள் அல்லது உதவி தேவைப்பட்டால் எங்களைத் தொடர்பு கொள்ளலாம்:</p>
+        <p>இக்கொள்கை குறித்த சந்தேகங்கள் மற்றும் தரவு நீக்கக் கோரிக்கைகளுக்கு எங்களைத் தொடர்பு கொள்ளலாம்:</p>
         <div class="contact-box">
             <strong>உருவாக்குநர்:</strong> Alaga Software Tech<br>
             <strong>மின்னஞ்சல்:</strong> <a href="mailto:alagarmca006@gmail.com">alagarmca006@gmail.com</a>
@@ -204,14 +219,24 @@
 </div>
 
 <script>
-    function scrollToSection(sectionId) {
-        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        const buttons = document.querySelectorAll('.lang-btn');
-        buttons.forEach(btn => btn.classList.remove('active'));
-        if (sectionId === 'english-section') {
-            buttons[1].classList.add('active');
+    function switchLanguage(lang) {
+        const enSection = document.getElementById('english-section');
+        const taSection = document.getElementById('tamil-section');
+        const btnEn = document.getElementById('btn-en');
+        const btnTa = document.getElementById('btn-ta');
+
+        if (lang === 'ta') {
+            enSection.style.display = 'none';
+            taSection.style.display = 'block';
+            btnTa.classList.add('active');
+            btnEn.classList.remove('active');
+            document.documentElement.lang = 'ta';
         } else {
-            buttons[0].classList.add('active');
+            taSection.style.display = 'none';
+            enSection.style.display = 'block';
+            btnEn.classList.add('active');
+            btnTa.classList.remove('active');
+            document.documentElement.lang = 'en';
         }
     }
 </script>
